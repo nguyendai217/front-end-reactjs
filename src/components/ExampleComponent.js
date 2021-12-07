@@ -21,8 +21,9 @@ export class ExampleComponent extends Component {
   handleClick() {
       console.log("log state", this.state);
   }
-
+  
   render() {
+    let {note, address}= this.props;
     return (
       <div className="example">
         <form>
@@ -49,6 +50,9 @@ export class ExampleComponent extends Component {
             }}
           ></input>
         </form>
+
+        <label>Note: {note}</label><br/>
+        <label>Adress: {address}</label>
       </div>
     );
   }
